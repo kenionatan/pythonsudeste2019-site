@@ -701,8 +701,7 @@ h6 {
    NAVIGATION
    ========================================================================== */
 nav {
-  background: #356F9F;
-  text-transform: uppercase;
+  background: #2b2b2b;
 }
 .nav-link {
   color: #e7e7e7;
@@ -717,11 +716,11 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-  background-image: url('../img/cover.jpg');
-  background-color: #2b2b2b;
+  background-image: url('../img/cover_overlay.jpg');
+  background-color: #193244;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100% auto;
+  background-position: center center;
+  background-size: cover;
 }
 .logo-link,
 .tagline,
@@ -879,11 +878,11 @@ nav {
 /* =============================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (max-width: 1024px) {
-  .header {
-    background-size: auto 100%;
-  }
-}
+/*@media only screen and (max-width: 1024px) {*/
+  /*.header {*/
+    /*background-size: auto 100%;*/
+  /*}*/
+/*}*/
 @media only screen and (max-width: 480px) {
   /* speakers */
   .speaker-photo .photo {
@@ -900,4 +899,52 @@ nav {
   .github-link {
     display: none;
   }
+}
+
+/* =============================================================================
+   CSS Design by Roger Gomes
+   ========================================================================== */
+nav {
+  background-color: #fff !important;
+  border-bottom: 4px solid #356f9f;
+}
+
+nav .logo {
+  float: left;
+  margin-left: 30px;
+}
+
+nav .wrapper{
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+nav .wrapper .nav-item a{
+  color: #356f9f;
+}
+
+
+nav .wrapper .nav-item a:hover{
+  color: #f9c626;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer .icons img{
+  margin: 5px;
+}
+
+.overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: rgba(53,111,159,0.5);
 }
